@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Cambio de fuente para mejorar la legibilidad */
+}
+
+body {
+    background-color: #eee;
+    margin: 0; /* Eliminamos el margen predeterminado del cuerpo */
+    padding: 20px; /* Agregamos un poco de espacio alrededor del cuerpo */
+}
+
+.container {
+    max-width: 800px; /* Limitamos el ancho del contenido principal */
+    margin: 0 auto; /* Centramos el contenido en la página */
+}
+
+.left {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px; /* Añadimos margen inferior para separar del siguiente elemento */
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Aumentamos el espacio entre elementos */
+    border: 1px solid #ccc; /* Cambiamos el color del borde para hacerlo menos llamativo */
+    border-radius: 5px;
+    outline: none;
+}
+
+#titulo {
+    font-weight: bold;
+    margin-bottom: 15px; /* Aumentamos el espacio entre el título y los elementos siguientes */
+}
+
+.dato {
+    margin-bottom: 10px; /* Añadimos espacio entre cada conjunto de datos */
+}
+
+.dato .serie {
+    width: 70%;
+    margin-right: 10px; /* Reducimos el margen derecho */
+}
+
+.dato .valor {
+    width: calc(30% - 10px); /* Utilizamos calc() para tener un margen derecho igual en todos los campos */
+}
+
+.agregar,
+.crear-grafico {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #18936f;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agregamos transición para hacer el cambio de color más suave */
+}
+
+.agregar:hover,
+.crear-grafico:hover {
+    background-color: #147853; /* Cambiamos el color al pasar el cursor sobre los botones */
+}
+
+.right {
+    border: 1px solid #000;
+    padding: 20px;
+    max-width: 100%; /* Aseguramos que el ancho máximo sea del 100% */
+    box-sizing: border-box; /* Mantenemos el ancho máximo dentro del borde */
+}

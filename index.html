@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de gráficos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #001f3f;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #3D9970;
+            color: #fff;
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #18936f;
+            border-color: #18936f;
+        }
+        .btn-primary:hover {
+            background-color: #137e5c;
+            border-color: #137e5c;
+        }
+        .btn-exit {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: #fff;
+            width: 100%; /* Abarca todo el ancho */
+            margin-top: 20px;
+        }
+        .btn-exit:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <br> <br>
+    <div class="d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a type="button" class="btn btn-secondary" href="GraficaLineal.php" >Grafica de fechas</a>
+            <a type="button" class="btn btn-secondary" href="GraficaBarra.php" >Grafica de alumnos</a>
+            <a type="button" class="btn btn-secondary" href="GraficaCircular.php" >Grafica de libros</a>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center">Creador de gráficos</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="tipo">Tipo de Gráfico:</label>
+                    <select class="form-control" id="tipo">
+                        <option value="circular">Gráfico circular</option>
+                        <option value="columna">Gráfico de barras</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título del Gráfico:</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Ingrese el título del gráfico">
+                </div>
+                <div id="datos">
+                    <div class="form-group dato">
+                        <input type="text" class="form-control serie" placeholder="Ingresa la leyenda">
+                        <input type="number" class="form-control valor" placeholder="Ingresa el valor ">
+                        <button class="btn btn-danger btn-sm mt-2 remove-btn">Eliminar</button>
+                    </div>
+                </div>
+                <button id="add-btn" class="btn btn-primary btn-sm">Agregar Dato</button>
+                <button id="generate-btn" class="btn btn-primary btn-sm float-right">Crear Gráfico</button>
+
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div id="piechart"></div>
+            </div>
+        </div>
+    </div>
+
+
+  
+    <!-- Botón de salida -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="http://localhost/biblio/Configuracion/admin" class="btn btn-exit">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="action.js"></script>
+</body>
+</html>
